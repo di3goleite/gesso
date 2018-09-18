@@ -16,7 +16,7 @@ function awesomeSplit(str) {
   return output;
 }
 
-fs.readFile('program.pr', 'utf8', function(error, data) {
+fs.readFile('./teste/program.pr', 'utf8', function(error, data) {
   const result = awesomeSplit(data)
   console.log(result);
 });
