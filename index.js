@@ -1,4 +1,5 @@
 const fs = require('fs');
+const classifier = require('./modules/Classifier')
 
 function awesomeSplit(str) {
   let temp = '';
@@ -45,5 +46,8 @@ fs.readFile('./teste/program.pr', 'utf8', function(error, data) {
 
   console.log('ouput ====================');
   console.log(result);
+
+  const classifications = classifier.classifyAll(result);
+  console.log(classifications);
 });
 
