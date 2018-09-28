@@ -12,12 +12,12 @@ fs.readFile('./teste/program.pr', 'utf8', function(error, data) {
   console.log(data.split(''));
   console.log('');
 
-  const result = split.run(data);
   console.log('ouput ====================');
+  const result = split.run(data);
   console.log(result);
+  console.log('');
 
-  const classifications = classifier.classifyAll(result);
   console.log('classification ====================');
+  const classifications = classifier.run(result);
   console.log(classifications);
 });
-
