@@ -18,6 +18,6 @@ fs.readFile('./teste/program.pr', 'utf8', function(error, data) {
   console.log('');
 
   const classifications = classifier.run(result);
-  // console.log('classification ====================');
-  // console.log(classifications);
+  console.log('classification ====================');
+  console.log(classifications);
 });
