@@ -1,4 +1,4 @@
-function(hue) {
+method(hue) {
   int br = -      2.0;
 
   if (hue != 1 && br >= 3) {
