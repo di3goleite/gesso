@@ -1,7 +1,8 @@
 const categories = {
-  DELIMITERS: ['\;', '\,', '\\(', '\\)', '\\[', '\\]', '\\{', '\\}', '\\.'],
+  ARITHMETIC_OPERATORS: ['\\+', '\\-', '\\*', '\\/', '\\+\\+', '\\-\\-'],
+  RELATIONAL_OPERATORS: ['!=', '==', '<', '<=', '>', '>=', '='],
   LOGIC_OPERATORS: ['\\!', '\\&\\&', '\\|\\|'],
-  ARITHMETIC_OPERATORS: ['!=', '==', '<', '<=', '>', '>=', '=']
+  DELIMITERS: ['\;', '\,', '\\(', '\\)', '\\[', '\\]', '\\{', '\\}', '\\.']
 };
 
 module.exports = { categories };

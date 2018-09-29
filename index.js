@@ -11,6 +11,7 @@ fs.readFile('./teste/program.pr', 'utf8', function(error, data) {
 
   let result = lexicalAnalyzer.cleanUp(data);
   result = lexicalAnalyzer.split(result);
+  result = lexicalAnalyzer.bandaid(result);
 
   console.log('ouput ====================');
   console.log(result);

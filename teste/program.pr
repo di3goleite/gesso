@@ -1,7 +1,7 @@
 function(hue) {
   int br = -      2;
 
-  if (hue && br) {
+  if (hue != 1 && br >= 3) {
     return hue;
   } else {
     return br;
