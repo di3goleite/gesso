@@ -5,7 +5,9 @@
 method(hue) {
   int br = -      2.0;
   float test = 1 - 2;
+
   write("hellooooooooooooo");
+  write("world!!!");
 
   // This is a line comment
   if (hue != 1 && br >= 3 || test == 1) {
