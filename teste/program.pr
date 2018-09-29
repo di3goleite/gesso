@@ -1,5 +1,5 @@
 function(hue) {
-  int br = - 2;
+  int br = -      2;
 
   if (hue && br) {
     return hue;
