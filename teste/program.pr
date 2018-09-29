@@ -1,7 +1,13 @@
+/* This is
+   a block
+   comment
+*/
 method(hue) {
   int br = -      2.0;
   float test = 1 - 2;
+  write("hellooooooooooooo!!!");
 
+  // This is a line comment
   if (hue != 1 && br >= 3 || test == 1) {
     return hue;
   } else {
