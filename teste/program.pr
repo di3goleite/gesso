@@ -1,1 +1,9 @@
-int i = - 2;
+function(hue) {
+  int br = - 2;
+
+  if (hue && br) {
+    return hue;
+  } else {
+    return br;
+  }
+}
