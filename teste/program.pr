@@ -15,4 +15,4 @@ method(hue) {
   } else {
     return br;
   }
-}s
+}
