@@ -22,7 +22,7 @@
 09	DEL	;
 10	PRE	write
 10	DEL	(
-10	IDE	hue"
+10	CdC	"world!!!hue"
 10	DEL	)
 10	DEL	;
 13	PRE	if
@@ -52,8 +52,7 @@
 17	DEL	}
 18	DEL	}
 
-Arquivo analisado com falhas. Total de erros: 2.
-10	CMF	"world!!!
+Arquivo analisado com falhas. Total de erros: 1.
 19	CoMF	/* This is
    a block
    comment
