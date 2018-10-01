@@ -5,57 +5,54 @@ const lexicalAnalyzer = require('./lib/lexicalAnalyzer');
 const classifier = require('./lib/classifier');
 
 fs.readFile('./teste/program.pr', 'utf8', function(error, data) {
-  console.log('input ====================');
-  console.log(data);
-  console.log('');
-
   let result = lexicalAnalyzer.cleanUp(data);
   result = lexicalAnalyzer.split(result);
   result = lexicalAnalyzer.bandaid(result);
+  result = classifier.run(result);
 
-  console.log('ouput ====================');
-  console.log(result);
-  console.log('');
+  const stream = fs.createWriteStream('teste/output.txt');
+  const mapping = require('./common/classificationMap');
 
-  const classifications = classifier.run(result);
-  console.log('classification ====================');
-  console.log(classifications);
+  let lineNumber = null;
+  let classification = null;
+  let output = null;
+  let message = null;
 
-  let stream = fs.createWriteStream("teste/output.txt");
-  stream.once("open", fd => {
-    const map = require("./common/classificationMap").map;
-    const mapKeys = Object.keys(map);
-    const mapValues = Object.values(map);
-
-    // Number of Errors found in analysis
-    let err = 0;
-    let errors = [];
-
-    classifications.forEach(obj => {
-      // Mapping classification to class abreviation
-      let position = mapKeys.indexOf(obj.class);
-      let mappedClass = mapValues[position];
-
-      let line = obj.line;
-      if(obj.line < 10) line = "0" + obj.line;
-
-      let writeData = line + "\t" + mappedClass + "\t" + obj.value + "\n";
-      if(obj.type == "error") {
-        // Counting errors
-        err++;
-        // Push on array to be written on the end of the file
-        errors.push(writeData);
-      }
-      else stream.write(writeData);
-    })
-
-    if(err === 0) stream.write("\n\nArquivo analisado com sucesso. Nenhum erro foi encontrado");
-    else {
-      stream.write("\nArquivo analisado com falhas. " + err + " erros foram encontrados.\n\n")
-      errors.forEach(obj => {
-        stream.write(obj);
-      })
-    }
-    stream.end();
+  const lexemes = result.filter(function(item) {
+    return item['type'] === 'lexeme';
   });
+
+  const errors = result.filter(function(item) {
+    return item['type'] === 'error';
+  });
+
+  // Write lexemes found
+  lexemes.forEach(function(item) {
+    lineNumber = parseInt(item['line']) < 10 ? '0' + item['line'] : item['line'];
+    classification = mapping[item['class']];
+    output = `${lineNumber}\t${classification}\t${item['value']}`;
+    stream.write(output + '\n');
+    console.log(output);
+  });
+
+  if (errors.length === 0) {
+    message = `Arquivo analisado com sucesso. Nenhum erro foi encontrado.`;
+    stream.write('\n' + message + '\n');
+    console.log('\n' + message);
+  } else {
+    message = `Arquivo analisado com falhas. Total de erros: ${errors.length}.`
+    stream.write('\n' + message + '\n');
+    console.log('\n' + message);
+
+    // Write errors found
+    errors.forEach(function(item) {
+      lineNumber = parseInt(item['line']) < 10 ? '0' + item['line'] : item['line'];
+      classification = mapping[item['class']];
+      output = `${lineNumber}\t${classification}\t${item['value']}`;
+      stream.write(output + '\n');
+      console.log(output);
+    });
+  }
+
+  stream.end();
 });

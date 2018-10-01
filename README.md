@@ -13,7 +13,7 @@ Tabela de siglas para as classificações
   // Classifications
   RESERVED_WORD: "PRE",
   IDENTIFIER: "IDE",
-  NUMBER: "NRO", 
+  NUMBER: "NRO",
   DELIMITER: "DEL",
   ARITHMETIC_OPERATION: "ART",
   RELATIONAL_OPERATION: "REL",
