@@ -8,14 +8,14 @@ const lexical = {
   LINE_COMMENT: /^\/\//,
   BLOCK_COMMENT: /^\/\*.+\*\/$/,
   DELIMITER: /(^;$|^,$|^\($|^\)$|^\[$|^\]$|^\{$|^\}$|^\.$)/,
-  CHARACTER_SEQUENCE: /^\"([^\"]|\\\")*\"$/
+  CHARACTER_SEQUENCE: /^(?!.*\\\"$)(\"([^\"]|\\\")*\")$/
 };
 
 const errors = {
   UNDEFINED_LEXEME: /.*/,
   MALFORMED_NUMBER: /^\-?\s*[0-9]+(\.[^0-9]+)$/,
-  MALFORMED_SEQUENCE: /^\".*(?<!\")$/,
-  MALFORMED_COMMENT: /^\/\*.*(?<!\*\/)$/,
+  MALFORMED_SEQUENCE: /^(?![^\\]*\"$)(\".*)$/,
+  MALFORMED_COMMENT: /^(?!.*\*\/$)(\/\*.*)$/,
   MALFORMED_IDENTIFIER: /^([a-z]|[A-Z]).*[^(\w|\d|\_)].*/
 };
 
