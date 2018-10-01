@@ -7,7 +7,9 @@ Frontend de compilador feito em Node JS. Time: **Bruno Lima** e **Diego Leite**
 3. Execute o software através do comando: `node index.js`
 
 ## Glossário
+
 Tabela de Lexemas:
+
 | Sigla | Significado          |
 |-------|----------------------|
 | PRE   | RESERVED_WORD        |
@@ -20,6 +22,7 @@ Tabela de Lexemas:
 | CdC   | CHARACTER_SEQUENCE   |
 
 Tabela de Erros:
+
 | Sigla | Significado          |
 |-------|----------------------|
 | NUL   | UNDEFINED_LEXEME     |
