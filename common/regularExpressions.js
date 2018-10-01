@@ -6,7 +6,7 @@ const lexical = {
   RELATIONAL_OPERATION: /(^\!\=$|^\=\=$|^<$|^<\=$|^>$|^>\=$|^=$)/,
   LOGIC_OPERATION: /(^\!$|^&&$|^\|\|$)/,
   LINE_COMMENT: /^\/\//,
-  BLOCK_COMMENT: /^\/\*.+\*\/$/,
+  BLOCK_COMMENT: /^\/\*.+\*\/$/m,
   DELIMITER: /(^;$|^,$|^\($|^\)$|^\[$|^\]$|^\{$|^\}$|^\.$)/,
   CHARACTER_SEQUENCE: /^(?!.*\\\"$)(\"([^\"]|\\\")*\")$/
 };
@@ -15,7 +15,7 @@ const errors = {
   UNDEFINED_LEXEME: /.*/,
   MALFORMED_NUMBER: /^\-?\s*[0-9]+(\.[^0-9]+)$/,
   MALFORMED_SEQUENCE: /^(?![^\\]*\"$)(\".*)$/,
-  MALFORMED_COMMENT: /^(?!.*\*\/$)(\/\*.*)$/,
+  MALFORMED_COMMENT: /^(?!.*\*\/$)(\/\*.*)$/m,
   MALFORMED_IDENTIFIER: /^([a-z]|[A-Z]).*[^(\w|\d|\_)].*/
 };
 
