@@ -42,7 +42,7 @@ fs.readFile('./teste/program.pr', 'utf8', function(error, data) {
 
     if(err === 0) stream.write("\n\nArquivo analisado com sucesso. Nenhum erro foi encontrado");
     else stream.write("\n\nArquivo analisado com falhas. " + err + " erros foram encontrados.")
-    
+
     stream.end();
-  })
+  });
 });

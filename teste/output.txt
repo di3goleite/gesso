@@ -1,0 +1,31 @@
+4	ART	/
+5	PRE	method
+5	DEL	(
+5	IDE	hue
+5	DEL	)
+5	DEL	{
+6	PRE	int
+6	IDE	br
+6	REL	=
+6	NRO	-      2.0
+6	DEL	;
+7	PRE	float
+7	IDE	test
+7	REL	=
+7	NRO	1
+7	ART	-
+7	NRO	 2
+7	DEL	;
+9	PRE	write
+9	DEL	(
+9	CdC	"hellooooooooooooo"
+9	DEL	)
+9	DEL	;
+10	PRE	write
+10	DEL	(
+10	NUL	"world!!!hueif(hue!=1&&br>=3||test==1){returnhue;}else{returnbr;}}/* This is
+   a block
+   comment
+
+
+Arquivo analisado com falhas. 1 erros foram encontrados.

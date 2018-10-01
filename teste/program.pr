@@ -16,3 +16,6 @@ method(hue) {
     return br;
   }
 }
+/* This is
+   a block
+   comment
