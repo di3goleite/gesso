@@ -1,29 +1,27 @@
-4	ART	/
-5	PRE	method
-5	DEL	(
-5	IDE	hue
-5	DEL	)
-5	DEL	{
-6	PRE	int
-6	IDE	br
-6	REL	=
-6	NRO	-      2.0
-6	DEL	;
-7	PRE	float
-7	IDE	test
-7	REL	=
-7	NRO	1
-7	ART	-
-7	NRO	 2
-7	DEL	;
-9	PRE	write
-9	DEL	(
-9	CdC	"hellooooooooooooo"
-9	DEL	)
-9	DEL	;
+05	PRE	method
+05	DEL	(
+05	IDE	hue
+05	DEL	)
+05	DEL	{
+06	PRE	int
+06	IDE	br
+06	REL	=
+06	NRO	-      2.0
+06	DEL	;
+07	PRE	float
+07	IDE	test
+07	REL	=
+07	NRO	1
+07	ART	-
+07	NRO	 2
+07	DEL	;
+09	PRE	write
+09	DEL	(
+09	CdC	"hellooooooooooooo"
+09	DEL	)
+09	DEL	;
 10	PRE	write
 10	DEL	(
-10	CMF	"world!!!
 10	IDE	hue"
 10	DEL	)
 10	DEL	;
@@ -53,9 +51,10 @@
 16	DEL	;
 17	DEL	}
 18	DEL	}
-19	NUL	/* This is
-   a block
-   comment
-
 
 Arquivo analisado com falhas. 2 erros foram encontrados.
+
+10	CMF	"world!!!
+19	CoMF	/* This is
+   a block
+   comment
