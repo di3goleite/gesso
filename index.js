@@ -15,8 +15,6 @@ fs.readFile('./teste/program.pr', 'utf8', function(error, data) {
 
   let lineNumber = null;
   let classification = null;
-  let output = null;
-  let message = null;
 
   const lexemes = result.filter(function(item) {
     return item['type'] === 'lexeme';
@@ -30,27 +28,20 @@ fs.readFile('./teste/program.pr', 'utf8', function(error, data) {
   lexemes.forEach(function(item) {
     lineNumber = parseInt(item['line']) < 10 ? '0' + item['line'] : item['line'];
     classification = mapping[item['class']];
-    output = `${lineNumber}\t${classification}\t${item['value']}`;
-    stream.write(output + '\n');
-    console.log(output);
+    stream.write(`${lineNumber}\t${classification}\t${item['value']}\n`);
   });
 
   if (errors.length === 0) {
-    message = `Arquivo analisado com sucesso. Nenhum erro foi encontrado.`;
-    stream.write('\n' + message + '\n');
-    console.log('\n' + message);
+    stream.write(`\nArquivo analisado com sucesso. Nenhum erro foi encontrado.\n`);
   } else {
-    message = `Arquivo analisado com falhas. Total de erros: ${errors.length}.`
-    stream.write('\n' + message + '\n');
-    console.log('\n' + message);
+    stream.write(`\nArquivo analisado com falhas. Total de erros: ${errors.length}.\n`);
 
     // Write errors found
     errors.forEach(function(item) {
       lineNumber = parseInt(item['line']) < 10 ? '0' + item['line'] : item['line'];
       classification = mapping[item['class']];
-      output = `${lineNumber}\t${classification}\t${item['value']}`;
-      stream.write(output + '\n');
-      console.log(output);
+      output = `${lineNumber}\t${classification}\t${item['value']}\n`;
+      stream.write(output);
     });
   }
 
