@@ -9,8 +9,7 @@ Frontend de compilador feito em Node JS. Time: **Bruno Lima** e **Diego Leite**
 ## Glossário
 
 Tabela de Lexemas:
-
-| Sigla | Significado          |
+| Sigla | Significado           |
 |-------|----------------------|
 | PRE   | RESERVED_WORD        |
 | IDE   | IDENTIFIER           |
@@ -22,8 +21,7 @@ Tabela de Lexemas:
 | CdC   | CHARACTER_SEQUENCE   |
 
 Tabela de Erros:
-
-| Sigla | Significado          |
+| Sigla | Significado           |
 |-------|----------------------|
 | NUL   | UNDEFINED_LEXEME     |
 | NMF   | MALFORMED_NUMBER     |
