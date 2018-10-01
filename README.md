@@ -6,6 +6,8 @@
 Para rodar, abra o terminal na pasta raíz do projeto e digite
 `node index.js`
 
+Para instalar o node em sua máquina é só ir em: https://nodejs.org/en/download/
+
 Tabela de siglas para as classificações
 ```javascript
   // Classifications
