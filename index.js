@@ -38,7 +38,7 @@ fs.readFile('./teste/program.pr', 'utf8', function(error, data) {
 
       let line = obj.line;
       if(obj.line < 10) line = "0" + obj.line;
-      
+
       let writeData = line + "\t" + mappedClass + "\t" + obj.value + "\n";
       if(obj.type == "error") {
         // Counting errors
@@ -46,7 +46,7 @@ fs.readFile('./teste/program.pr', 'utf8', function(error, data) {
         // Push on array to be written on the end of the file
         errors.push(writeData);
       }
-      else stream.write(writeData); 
+      else stream.write(writeData);
     })
 
     if(err === 0) stream.write("\n\nArquivo analisado com sucesso. Nenhum erro foi encontrado");
