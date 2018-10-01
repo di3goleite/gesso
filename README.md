@@ -6,31 +6,6 @@ Frontend de compilador feito em Node JS. Time: **Bruno Lima** e **Diego Leite**
 2. Abra o terminal e navegue até a pasta do projeto
 3. Execute o software através do comando: `node index.js`
 
-## Glossário
-
-Tabela de Lexemas:
-
-| Sigla | Significado          |
-|-------|----------------------|
-| PRE   | RESERVED_WORD        |
-| IDE   | IDENTIFIER           |
-| NRO   | NUMBER               |
-| DEL   | DELIMITER            |
-| ART   | ARITHMETIC_OPERATION |
-| REL   | RELATIONAL_OPERATION |
-| LOG   | LOGIC_OPERATION      |
-| CdC   | CHARACTER_SEQUENCE   |
-
-Tabela de Erros:
-
-| Sigla | Significado          |
-|-------|----------------------|
-| NUL   | UNDEFINED_LEXEME     |
-| NMF   | MALFORMED_NUMBER     |
-| CMF   | MALFORMED_SEQUENCE   |
-| CoMF  | MALFORMED_COMMENT    |
-| IMF   | MALFORMED_IDENTIFIER |
-
 ## Parte 1 - Análise Léxica
 Input:
 ```
@@ -118,3 +93,28 @@ Arquivo analisado com falhas. Total de erros: 1.
    a block
    comment
 ```
+
+## Glossário
+
+Tabela de Lexemas:
+
+| Sigla | Significado          |
+|-------|----------------------|
+| PRE   | RESERVED_WORD        |
+| IDE   | IDENTIFIER           |
+| NRO   | NUMBER               |
+| DEL   | DELIMITER            |
+| ART   | ARITHMETIC_OPERATION |
+| REL   | RELATIONAL_OPERATION |
+| LOG   | LOGIC_OPERATION      |
+| CdC   | CHARACTER_SEQUENCE   |
+
+Tabela de Erros:
+
+| Sigla | Significado          |
+|-------|----------------------|
+| NUL   | UNDEFINED_LEXEME     |
+| NMF   | MALFORMED_NUMBER     |
+| CMF   | MALFORMED_SEQUENCE   |
+| CoMF  | MALFORMED_COMMENT    |
+| IMF   | MALFORMED_IDENTIFIER |
