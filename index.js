@@ -11,7 +11,7 @@ fs.readFile('./teste/program.pr', 'utf8', function(error, data) {
   result = classifier.run(result);
 
   const stream = fs.createWriteStream('teste/output.txt');
-  const mapping = require('./common/classificationMap');
+  const mapping = require('./common/classificationMapping');
 
   let lineNumber = null;
   let classification = null;
@@ -27,7 +27,7 @@ fs.readFile('./teste/program.pr', 'utf8', function(error, data) {
   // Write lexemes found
   lexemes.forEach(function(item) {
     lineNumber = parseInt(item['line']) < 10 ? '0' + item['line'] : item['line'];
-    classification = mapping[item['class']];
+    classification = mapping['lexical'][item['class']];
     stream.write(`${lineNumber}\t${classification}\t${item['value']}\n`);
   });
 
@@ -39,7 +39,7 @@ fs.readFile('./teste/program.pr', 'utf8', function(error, data) {
     // Write errors found
     errors.forEach(function(item) {
       lineNumber = parseInt(item['line']) < 10 ? '0' + item['line'] : item['line'];
-      classification = mapping[item['class']];
+      classification = mapping['errors'][item['class']];
       output = `${lineNumber}\t${classification}\t${item['value']}\n`;
       stream.write(output);
     });

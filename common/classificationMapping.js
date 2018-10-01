@@ -1,5 +1,4 @@
-module.exports = {
-  // Classifications
+const lexical = {
   RESERVED_WORD: 'PRE',
   IDENTIFIER: 'IDE',
   NUMBER: 'NRO',
@@ -8,11 +7,14 @@ module.exports = {
   RELATIONAL_OPERATION: 'REL',
   LOGIC_OPERATION: 'LOG',
   CHARACTER_SEQUENCE: 'CdC',
+};
 
-  // Errors
+const errors = {
   UNDEFINED_LEXEME: 'NUL',
   MALFORMED_NUMBER: 'NMF',
   MALFORMED_SEQUENCE: 'CMF',
   MALFORMED_COMMENT: 'CoMF',
   MALFORMED_IDENTIFIER: 'IMF'
 };
+
+module.exports = { lexical, errors };
