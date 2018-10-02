@@ -13,8 +13,8 @@ const lexical = {
 
 const errors = {
   UNDEFINED_LEXEME: /.*/,
-  MALFORMED_NUMBER: /^\-?\s*[0-9]+(\.[^0-9]+)$/,
-  MALFORMED_SEQUENCE: /^(?![^\\]*\"$)(\".*)$/,
+  MALFORMED_NUMBER: /^\-?\s*[0-9]+(\..*[^0-9]+.*$|.*[^0-9\.]+.*|\.$)/,
+  MALFORMED_SEQUENCE: /^(?![^\\]*\"$)(\".*)$/m,
   MALFORMED_COMMENT: /^(?!.*\*\/$)(\/\*.*)$/m,
   MALFORMED_IDENTIFIER: /^([a-z]|[A-Z]).*[^(\w|\d|\_)].*/
 };
