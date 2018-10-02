@@ -31,10 +31,13 @@ fs.readFile('./teste/program.pr', 'utf8', function(error, data) {
     stream.write(`${lineNumber}\t${classification}\t${item['value']}\n`);
   });
 
-  if (errors.length === 0) {
-    stream.write(`\nArquivo analisado com sucesso. Nenhum erro foi encontrado.\n`);
-  } else {
-    stream.write(`\nArquivo analisado com falhas. Total de erros: ${errors.length}.\n`);
+  // Show errors if they exists
+  if (errors.length > 0) {
+    if (lexemes.length > 0) {
+      stream.write(`\n`);
+    }
+
+    stream.write(`Arquivo analisado com falhas. Total de erros: ${errors.length}.\n`);
 
     // Write errors found
     errors.forEach(function(item) {
@@ -43,6 +46,8 @@ fs.readFile('./teste/program.pr', 'utf8', function(error, data) {
       output = `${lineNumber}\t${classification}\t${item['value']}\n`;
       stream.write(output);
     });
+  } else {
+    stream.write(`\nArquivo analisado com sucesso. Nenhum erro foi encontrado.`);
   }
 
   stream.end();
