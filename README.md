@@ -1,5 +1,5 @@
-# [EXA869] MI - PROCESSADORES DE LINGUAGEM DE PROGRAMAÇÃO
-Frontend de compilador feito em Node JS. Time: **Bruno Lima** e **Diego Leite**
+# Gesso - A linguagem de programação engessada
+Frontend de compilador feito em Node JS. Time: **Bruno Lima** e **Diego Leite** para a disciplina [EXA869] MI - Processadores de Linguagem de Programação.
 
 ## Instruções
 1. Faça o download da versão mais recente do [Node JS](https://nodejs.org/en/download/)
