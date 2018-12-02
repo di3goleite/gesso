@@ -1,0 +1,19 @@
+03	PRE	main
+03	IDE	principal
+03	DEL	(
+03	DEL	)
+04	DEL	{
+05	PRE	int
+05	IDE	cont@dor
+05	DEL	;
+06	DEL	;
+08	IDE	salario$mes
+08	DEL	;
+10	IDE	flag_#1
+10	DEL	,
+10	IDE	flag2flag_3_#
+10	DEL	;
+12	IDE	uefs_123
+
+Arquivo analisado com falhas. Total de erros: 1.
+06	NUL	_x

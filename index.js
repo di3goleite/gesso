@@ -82,7 +82,8 @@ function doLexicalAnalysis(file) {
   });
 }
 
-async function run() {
+// Application bootstrap with IIFE
+(async function() {
   try {
     const TARGET_DIRECTORY = path.join(__dirname, 'teste');
     const files = await getFilePaths(TARGET_DIRECTORY);
@@ -93,8 +94,4 @@ async function run() {
   } catch(e) {
     console.log(e.message);
   }
-}
-
-// Application bootstrap
-run();
-
+});
