@@ -1,24 +1,24 @@
 const {
-	int a = 10, b = 50;
+  int a = 10, b = 50;
 }
 
 class Calculadora {
 
-	method int somar(int v1, int v2) {
-		return v1 + v2;
-	}
+  method int somar(int v1, int v2) {
+    return v1 + v2;
+  }
 
 }
 
 main {
 
-	variables {
-		Calculadora calc;
-		int resultado;
-	}
+  variables {
+    Calculadora calc;
+    int resultado;
+  }
 
-	resultado = calc.somar(a, b);
+  resultado = calc.somar(a, b);
 
-	write("Resultado:", resultado);
+  write("Resultado:", resultado);
 
 }

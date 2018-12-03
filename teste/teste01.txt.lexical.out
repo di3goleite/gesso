@@ -61,4 +61,5 @@
 22	DEL	;
 24	DEL	}
 
-Arquivo analisado com sucesso. Nenhum erro foi encontrado.
+Arquivo analisado com falhas. Total de erros: 1.
+25	NUL	
