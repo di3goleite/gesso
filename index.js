@@ -104,7 +104,11 @@ function doLexicalAnalysis(file) {
 async function run() {
   try {
     const TARGET_DIRECTORY = path.join(__dirname, 'teste');
-    const files = await getFilePaths(TARGET_DIRECTORY);
+    const files = (
+      process.argv.length === 3 ?
+      [process.argv[2].split('teste/')[1]] :
+      await getFilePaths(TARGET_DIRECTORY)
+    );
 
     let filename = '';
     let lexemes = [];
