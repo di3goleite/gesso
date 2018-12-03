@@ -21,6 +21,25 @@ function getFilePaths(folder) {
   });
 }
 
+function doSyntaxAnalysis(file, lexemes) {
+  return new Promise(function (resolve, reject) {
+    const errors = require('./lib/syntaxAnalyzer')(lexemes).receiveStart();
+
+    const stream = fs.createWriteStream(file + '.syntax.out');
+
+    if (errors.length > 0) {
+      errors.forEach(function (error) {
+        stream.write(error);
+      });
+    } else {
+      stream.write('Sucesso. Nenhum error de sintax foi encontrado!');
+    }
+
+    stream.end();
+    resolve();
+  });
+}
+
 function doLexicalAnalysis(file) {
   const lexicalAnalyzer = require('./lib/lexicalAnalyzer');
   const classifier = require('./lib/classifier');
@@ -76,7 +95,7 @@ function doLexicalAnalysis(file) {
         }
 
         stream.end();
-        resolve();
+        resolve(lexemes);
       }
     });
   });
@@ -87,8 +106,13 @@ async function run() {
     const TARGET_DIRECTORY = path.join(__dirname, 'teste');
     const files = await getFilePaths(TARGET_DIRECTORY);
 
+    let filename = '';
+    let lexemes = [];
+
     for (const file of files) {
-      await doLexicalAnalysis(path.join(TARGET_DIRECTORY, file));
+      filename = path.join(TARGET_DIRECTORY, file);
+      lexemes = await doLexicalAnalysis(filename);
+      await doSyntaxAnalysis(filename, lexemes);
     }
   } catch(e) {
     console.log(e.message);
