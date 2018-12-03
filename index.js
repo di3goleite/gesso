@@ -29,7 +29,7 @@ function doSyntaxAnalysis(file, lexemes) {
 
     if (errors.length > 0) {
       errors.forEach(function (error) {
-        stream.write(error);
+        stream.write(`${error}\n`);
       });
     } else {
       stream.write('Sucesso. Nenhum error de sintax foi encontrado!');
