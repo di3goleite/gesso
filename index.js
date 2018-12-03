@@ -111,6 +111,7 @@ async function run() {
 
     for (const file of files) {
       filename = path.join(TARGET_DIRECTORY, file);
+      console.log(filename);
       lexemes = await doLexicalAnalysis(filename);
       await doSyntaxAnalysis(filename, lexemes);
     }
