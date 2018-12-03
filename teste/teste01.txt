@@ -1,21 +1,24 @@
-/* This is
-   a block
-   comment
-*/
-method(hue) {
-  int br = -      2.0;
-  float test = 1 - 2;
-
-  write("hellooooooooooooo");
-  write("world!!!hue");
-
-  // This is a line comment
-  if (hue != 1 && br >= 3 || test == 1) {
-    return hue;
-  } else {
-    return br;
-  }
+const {
+	int a = 10, b = 50;
 }
-/* This is
-   a block
-   comment
+
+class Calculadora {
+
+	method int somar(int v1, int v2) {
+		return v1 + v2;
+	}
+
+}
+
+main {
+
+	variables {
+		Calculadora calc;
+		int resultado;
+	}
+
+	resultado = calc.somar(a, b);
+
+	write("Resultado:", resultado);
+
+}

@@ -1,1 +1,21 @@
-Sucesso. Nenhum error de sintax foi encontrado!
+Erro. Linha: 2, Token Lido: ,, Mensagem: Faltando ponto-vírgula
+Erro. Linha: 2, Token Lido: ,, Mensagem: Tipo de variável não reconhecido
+Erro. Linha: 2, Token Lido: ;, Mensagem: Tipo de variável não reconhecido
+Erro. Linha: 3, Token Lido: }, Mensagem: Espera-va receber um Identificador. Recebido DELIMITER
+Erro. Linha: 5, Token Lido: {, Mensagem: Faltando ponto-vírgula
+Erro. Linha: 5, Token Lido: {, Mensagem: Tipo de variável não reconhecido
+Erro. Linha: 7, Token Lido: method, Mensagem: Espera-va receber um Identificador. Recebido RESERVED_WORD
+Erro. Linha: 7, Token Lido: (, Mensagem: Faltando ponto-vírgula
+Erro. Linha: 7, Token Lido: (, Mensagem: Tipo de variável não reconhecido
+Erro. Linha: 7, Token Lido: int, Mensagem: Espera-va receber um Identificador. Recebido RESERVED_WORD
+Erro. Linha: 7, Token Lido: int, Mensagem: Faltando ponto-vírgula
+Erro. Linha: 8, Token Lido: return, Mensagem: Faltando ponto-vírgula
+Erro. Linha: 8, Token Lido: return, Mensagem: Tipo de variável não reconhecido
+Erro. Linha: 8, Token Lido: ;, Mensagem: Tipo de variável não reconhecido
+Erro. Linha: 9, Token Lido: }, Mensagem: Espera-va receber um Identificador. Recebido DELIMITER
+Erro. Linha: 13, Token Lido: {, Mensagem: Faltando ponto-vírgula
+Erro. Linha: 13, Token Lido: {, Mensagem: Tipo de variável não reconhecido
+Erro. Linha: 15, Token Lido: variables, Mensagem: Espera-va receber um Identificador. Recebido RESERVED_WORD
+Erro. Linha: 16, Token Lido: ;, Mensagem: Tipo de variável não reconhecido
+Erro. Linha: 17, Token Lido: int, Mensagem: Espera-va receber um Identificador. Recebido RESERVED_WORD
+Erro. Linha: 18, Token Lido: }, Mensagem: Faltando ponto-vírgula
