@@ -124,5 +124,4 @@ async function run() {
   }
 }
 
-// Application bootstrap
-run();
+run(); // Application bootstrap
