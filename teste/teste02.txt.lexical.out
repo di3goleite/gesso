@@ -3,9 +3,9 @@
 02	IDE	Calculadora
 02	IDE	calc
 02	DEL	;
-04	PRE	int
-04	IDE	resultado
-04	DEL	;
-05	DEL	}
+03	PRE	int
+03	IDE	resultado
+03	DEL	;
+04	DEL	}
 
 Arquivo analisado com sucesso. Nenhum erro foi encontrado.

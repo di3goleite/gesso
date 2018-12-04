@@ -1,6 +1,5 @@
 variables {
   Calculadora calc;
-
   int resultado;
 }
 

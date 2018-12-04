@@ -1,0 +1,12 @@
+main {
+  variables {
+    Calculadora calc;
+    int valor1, valor2, resultado;
+  }
+
+  read(valor1);
+  read(valor2);
+
+  resultado = calc.somar(valor1, valor2);
+  write("Resultado:", resultado);
+}
